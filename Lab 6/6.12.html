@@ -1,0 +1,63 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Data</title>
+</head>
+<body>
+<table border=1>
+<tr>
+<td bgcolor=silver class='medium'>TRIGGER_CATALOG</td>
+<td bgcolor=silver class='medium'>TRIGGER_SCHEMA</td>
+<td bgcolor=silver class='medium'>TRIGGER_NAME</td>
+<td bgcolor=silver class='medium'>EVENT_MANIPULATION</td>
+<td bgcolor=silver class='medium'>EVENT_OBJECT_CATALOG</td>
+<td bgcolor=silver class='medium'>EVENT_OBJECT_SCHEMA</td>
+<td bgcolor=silver class='medium'>EVENT_OBJECT_TABLE</td>
+<td bgcolor=silver class='medium'>ACTION_ORDER</td>
+<td bgcolor=silver class='medium'>ACTION_CONDITION</td>
+<td bgcolor=silver class='medium'>ACTION_STATEMENT</td>
+<td bgcolor=silver class='medium'>ACTION_ORIENTATION</td>
+<td bgcolor=silver class='medium'>ACTION_TIMING</td>
+<td bgcolor=silver class='medium'>ACTION_REFERENCE_OLD_TABLE</td>
+<td bgcolor=silver class='medium'>ACTION_REFERENCE_NEW_TABLE</td>
+<td bgcolor=silver class='medium'>ACTION_REFERENCE_OLD_ROW</td>
+<td bgcolor=silver class='medium'>ACTION_REFERENCE_NEW_ROW</td>
+<td bgcolor=silver class='medium'>CREATED</td>
+<td bgcolor=silver class='medium'>SQL_MODE</td>
+<td bgcolor=silver class='medium'>DEFINER</td>
+<td bgcolor=silver class='medium'>CHARACTER_SET_CLIENT</td>
+<td bgcolor=silver class='medium'>COLLATION_CONNECTION</td>
+<td bgcolor=silver class='medium'>DATABASE_COLLATION</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>def</td>
+<td class='normal' valign='top'>classicmodels</td>
+<td class='normal' valign='top'>before_employee_update_031</td>
+<td class='normal' valign='top'>UPDATE</td>
+<td class='normal' valign='top'>def</td>
+<td class='normal' valign='top'>classicmodels</td>
+<td class='normal' valign='top'>employees</td>
+<td class='normal' valign='top'>1</td>
+<td class='normal' valign='top'>NULL</td>
+<td class='normal' valign='top'>begin
+insert into employees_audit
+set action='update',
+employeeNumber=OLD.employeeNumber,
+lastname=OLD.lastname,
+changedon=now();
+End</td>
+<td class='normal' valign='top'>ROW</td>
+<td class='normal' valign='top'>BEFORE</td>
+<td class='normal' valign='top'>NULL</td>
+<td class='normal' valign='top'>NULL</td>
+<td class='normal' valign='top'>OLD</td>
+<td class='normal' valign='top'>NEW</td>
+<td class='normal' valign='top'>2022-01-28 11:38:30.48</td>
+<td class='normal' valign='top'>STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION</td>
+<td class='normal' valign='top'>root@localhost</td>
+<td class='normal' valign='top'>utf8mb4</td>
+<td class='normal' valign='top'>utf8mb4_0900_ai_ci</td>
+<td class='normal' valign='top'>latin1_swedish_ci</td>
+</tr>
+</table>
+</body></html>
